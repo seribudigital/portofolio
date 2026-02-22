@@ -60,14 +60,16 @@ export default function CaseStudyContent({ project }: Props) {
                         initial={{ opacity: 0, scale: 0.97 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.6 }}
-                        className="relative overflow-hidden rounded-2xl"
+                        className={`relative overflow-hidden rounded-2xl bg-gradient-to-br ${project.gradient}`}
                     >
-                        <img
-                            src={project.image}
-                            alt={project.title}
-                            className="h-64 w-full object-cover sm:h-80"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/10" />
+                        <div className="flex items-center justify-center" style={{ maxHeight: '400px' }}>
+                            <img
+                                src={project.image}
+                                alt={project.title}
+                                className="w-full object-contain"
+                                style={{ maxHeight: '400px' }}
+                            />
+                        </div>
                     </motion.div>
 
                     {/* ── Main Content: Sidebar + Narrative ── */}
