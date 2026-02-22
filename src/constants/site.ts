@@ -12,9 +12,9 @@ export const siteConfig = {
         linkedin: "https://linkedin.com/company/seribudigital",
     },
     navLinks: [
-        { label: "Home", href: "#home" },
-        { label: "Services", href: "#services" },
-        { label: "Projects", href: "#projects" },
-        { label: "Contact", href: "#contact" },
+        { label: "Home", href: "/#home" },
+        { label: "Services", href: "/#services" },
+        { label: "Projects", href: "/#projects" },
+        { label: "Contact", href: "/#contact" },
     ],
 } as const;

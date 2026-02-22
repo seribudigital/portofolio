@@ -30,31 +30,30 @@ interface Props {
 export default function CaseStudyContent({ project }: Props) {
     return (
         <PageTransition>
-            {/* ── Floating Back Button ── */}
-            <Link
-                href="/"
-                className="fixed top-24 left-6 z-40 flex items-center gap-2 rounded-full border border-border bg-background/80 px-4 py-2 text-sm font-medium text-muted backdrop-blur-xl transition-all duration-300 hover:border-accent/30 hover:text-accent hover:shadow-lg hover:shadow-accent/10"
-            >
-                <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 16 16"
-                    fill="none"
-                    className="transition-transform group-hover:-translate-x-0.5"
-                >
-                    <path
-                        d="M10 12L6 8L10 4"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                    />
-                </svg>
-                Beranda
-            </Link>
-
             <article className="px-6 pt-28 pb-20 md:px-12 lg:px-24">
                 <div className="mx-auto max-w-6xl">
+                    {/* ── Back Button ── */}
+                    <Link
+                        href="/#projects"
+                        className="group mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-white/[0.02] px-5 py-2.5 text-sm font-medium text-muted backdrop-blur-sm transition-all duration-300 hover:border-accent/30 hover:text-accent hover:shadow-lg hover:shadow-accent/10"
+                    >
+                        <svg
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                            className="transition-transform duration-200 group-hover:-translate-x-1"
+                        >
+                            <path
+                                d="M10 12L6 8L10 4"
+                                stroke="currentColor"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                            />
+                        </svg>
+                        Kembali ke Proyek
+                    </Link>
                     {/* ── Hero Cover ── */}
                     <motion.div
                         initial={{ opacity: 0, scale: 0.97 }}

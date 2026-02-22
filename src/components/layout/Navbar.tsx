@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 import { siteConfig } from "@/constants/site";
 import { useScrollDirection } from "@/hooks/useScrollDirection";
 
@@ -18,30 +19,30 @@ export default function Navbar() {
             animate={{ y: isHidden ? -100 : 0 }}
             transition={{ duration: 0.3 }}
             className={`fixed top-0 right-0 left-0 z-50 transition-colors duration-300 ${isScrolled
-                    ? "border-b border-border bg-background/80 backdrop-blur-xl"
-                    : "bg-transparent"
+                ? "border-b border-border bg-background/80 backdrop-blur-xl"
+                : "bg-transparent"
                 }`}
         >
             <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
                 {/* Logo */}
-                <a
-                    href="#home"
+                <Link
+                    href="/#home"
                     className="text-xl font-bold tracking-tight text-foreground transition-colors hover:text-accent"
                 >
                     {siteConfig.name}
                     <span className="text-accent">.</span>
-                </a>
+                </Link>
 
                 {/* Desktop Navigation */}
                 <ul className="hidden items-center gap-8 md:flex">
                     {siteConfig.navLinks.map((link) => (
                         <li key={link.href}>
-                            <a
+                            <Link
                                 href={link.href}
                                 className="text-sm font-medium text-muted transition-colors duration-200 hover:text-foreground"
                             >
                                 {link.label}
-                            </a>
+                            </Link>
                         </li>
                     ))}
                 </ul>
@@ -84,13 +85,13 @@ export default function Navbar() {
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{ delay: i * 0.1 }}
                                 >
-                                    <a
+                                    <Link
                                         href={link.href}
                                         onClick={() => setMobileOpen(false)}
                                         className="text-lg font-medium text-muted transition-colors hover:text-foreground"
                                     >
                                         {link.label}
-                                    </a>
+                                    </Link>
                                 </motion.li>
                             ))}
                         </ul>
