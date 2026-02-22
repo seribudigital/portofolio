@@ -46,8 +46,8 @@ export default function Projects() {
                         key={cat}
                         onClick={() => setActiveFilter(cat)}
                         className={`relative rounded-full px-5 py-2 text-sm font-medium transition-colors duration-200 cursor-pointer ${activeFilter === cat
-                                ? "text-white"
-                                : "text-muted hover:text-foreground"
+                            ? "text-white"
+                            : "text-muted hover:text-foreground"
                             }`}
                     >
                         {activeFilter === cat && (

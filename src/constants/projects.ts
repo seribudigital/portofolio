@@ -26,7 +26,7 @@ export const PROJECTS: Project[] = [
         category: "Properti & Real Estate",
         description:
             "Landing page eksklusif untuk pemasaran properti residensial premium dengan galeri interaktif, tabel spesifikasi teknis, dan integrasi WhatsApp untuk konversi cepat.",
-        image: "/images/projects/griya-harianto-utama.jpg",
+        image: "https://hujtpnndfhnxddglztdn.supabase.co/storage/v1/object/public/seribudigital/portoghu.webp",
         gradient: "from-amber-500/20 via-orange-500/10 to-yellow-600/20",
         icon: "🏠",
         details: {
@@ -48,7 +48,7 @@ export const PROJECTS: Project[] = [
         category: "Edukasi",
         description:
             "Landing page pendaftaran siswa baru dengan sistem registrasi online, dashboard admin real-time, dan portal informasi sekolah yang terintegrasi.",
-        image: "/images/projects/al-khoir-islamic-school.jpg",
+        image: "https://hujtpnndfhnxddglztdn.supabase.co/storage/v1/object/public/seribudigital/portoalkhoir.webp",
         gradient: "from-emerald-500/20 via-teal-500/10 to-green-600/20",
         icon: "🎓",
         details: {
@@ -70,7 +70,7 @@ export const PROJECTS: Project[] = [
         category: "Jasa & Layanan",
         description:
             "Website profesional untuk layanan jasa laundry dengan katalog layanan, pricelist interaktif, dan sistem pemesanan via WhatsApp.",
-        image: "/images/projects/la-petite-royal-laundry.jpg",
+        image: "https://hujtpnndfhnxddglztdn.supabase.co/storage/v1/object/public/seribudigital/portolapetite.webp",
         gradient: "from-sky-500/20 via-blue-500/10 to-indigo-600/20",
         icon: "👔",
         details: {
@@ -92,7 +92,7 @@ export const PROJECTS: Project[] = [
         category: "Produk & E-Commerce",
         description:
             "Website produk untuk sistem filter air rumah tangga dengan katalog produk, edukasi kualitas air, dan integrasi pemesanan langsung.",
-        image: "/images/projects/adenfilter.jpg",
+        image: "https://hujtpnndfhnxddglztdn.supabase.co/storage/v1/object/public/seribudigital/portoadenfilter.webp",
         gradient: "from-cyan-500/20 via-sky-500/10 to-blue-600/20",
         icon: "💧",
         details: {
@@ -126,6 +126,50 @@ export const PROJECTS: Project[] = [
                 "Kami mengembangkan website profesional dengan tampilan yang kredibel dan informatif. Fitur meliputi katalog layanan lengkap (service, cleaning, instalasi, repair) dengan deskripsi detail, peta area jangkauan layanan, testimoni pelanggan untuk membangun kepercayaan, serta sistem booking cepat via WhatsApp yang memudahkan penjadwalan servis.",
             result:
                 "Perluasan jangkauan pelanggan secara signifikan melalui pencarian online. Pengurangan waktu administrasi karena pelanggan sudah mendapat informasi lengkap sebelum menghubungi. Peningkatan profesionalisme dan kepercayaan brand di mata pelanggan baru.",
+            techStack: ["Next.js", "Tailwind CSS", "Framer Motion"],
+        },
+    },
+    {
+        id: 6,
+        slug: "jago-angka",
+        title: "Jago Angka",
+        category: "Edukasi & Tools",
+        description:
+            "Sebuah proyek pengembangan aplikasi yang menitikberatkan pada efisiensi pemrosesan data dan keamanan tingkat tinggi. Kami mengimplementasikan manajemen API yang aman untuk memastikan integritas data tetap terjaga dalam lingkungan kerja yang dinamis.",
+        image: "https://hujtpnndfhnxddglztdn.supabase.co/storage/v1/object/public/seribudigital/portojagoangka.webp",
+        gradient: "from-rose-500/20 via-pink-500/10 to-red-600/20",
+        icon: "🔢",
+        details: {
+            headline:
+                "Optimasi Performa & Keamanan: Platform Manajemen Data yang Presisi",
+            challenge:
+                "Mengelola integrasi API eksternal yang kompleks sambil memastikan kunci API tetap aman dan tidak terekspos ke publik.",
+            solution:
+                "Implementasi restriksi API, penggunaan environment variables yang ketat, dan optimasi query untuk kecepatan akses data.",
+            result:
+                "Platform yang stabil dengan sistem keamanan data yang terverifikasi dan performa loading yang optimal.",
+            techStack: ["Next.js", "Tailwind CSS", "Firebase", "Firestore"],
+        },
+    },
+    {
+        id: 7,
+        slug: "tabel-periodik",
+        title: "Tabel Periodik Interaktif",
+        category: "Edukasi",
+        description:
+            "Media pembelajaran interaktif yang dirancang untuk memudahkan siswa memahami tabel periodik unsur. Fokus pada kemudahan navigasi dan visualisasi data yang menarik untuk meningkatkan minat belajar digital.",
+        image: "https://hujtpnndfhnxddglztdn.supabase.co/storage/v1/object/public/seribudigital/portotabel.webp",
+        gradient: "from-teal-500/20 via-emerald-500/10 to-lime-600/20",
+        icon: "⚛️",
+        details: {
+            headline:
+                "E-Learning Visual: Eksplorasi Unsur Kimia melalui Antarmuka Modern",
+            challenge:
+                "Menyajikan data teknis yang padat dari puluhan unsur kimia ke dalam layout yang bersih dan responsif di semua perangkat.",
+            solution:
+                "Penggunaan grid sistem yang dinamis, filter kategori unsur berdasarkan golongan, dan animasi hover untuk detail informasi instan.",
+            result:
+                "Alat bantu belajar yang memudahkan siswa SMA melakukan riset mandiri secara visual dan menyenangkan.",
             techStack: ["Next.js", "Tailwind CSS", "Framer Motion"],
         },
     },
