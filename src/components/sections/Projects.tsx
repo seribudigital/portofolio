@@ -88,22 +88,14 @@ export default function Projects() {
                                     <article className="relative overflow-hidden rounded-2xl border border-border bg-white/[0.02] transition-all duration-500 group-hover:border-accent/30 group-hover:shadow-xl group-hover:shadow-accent/5">
                                         {/* Cover Area */}
                                         <div className="relative h-52 overflow-hidden sm:h-56">
-                                            <div
-                                                className={`absolute inset-0 bg-gradient-to-br ${project.gradient} transition-transform duration-700 ease-out group-hover:scale-110`}
+                                            {/* Project Image */}
+                                            <img
+                                                src={project.image}
+                                                alt={project.title}
+                                                className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                                             />
-                                            <div
-                                                className="absolute inset-0 opacity-[0.05]"
-                                                style={{
-                                                    backgroundImage:
-                                                        "linear-gradient(rgba(255,255,255,0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.2) 1px, transparent 1px)",
-                                                    backgroundSize: "40px 40px",
-                                                }}
-                                            />
-                                            <div className="absolute inset-0 flex items-center justify-center">
-                                                <span className="text-7xl opacity-40 transition-all duration-500 group-hover:scale-110 group-hover:opacity-60">
-                                                    {project.icon}
-                                                </span>
-                                            </div>
+                                            {/* Gradient Overlay */}
+                                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-black/10" />
                                             <div className="absolute top-4 left-4">
                                                 <span className="rounded-full border border-white/20 bg-black/40 px-3 py-1 text-xs font-medium text-white/90 backdrop-blur-md">
                                                     {project.category}
