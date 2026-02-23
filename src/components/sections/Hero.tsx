@@ -24,33 +24,7 @@ const itemVariants: Variants = {
     },
 };
 
-/* ── Glowing Orbs config ── */
-const orbs = [
-    {
-        size: 500,
-        x: [0, 120, -80, 60, 0],
-        y: [0, -100, 60, -120, 0],
-        duration: 25,
-        left: "20%",
-        top: "15%",
-    },
-    {
-        size: 400,
-        x: [0, -100, 80, -60, 0],
-        y: [0, 80, -60, 100, 0],
-        duration: 30,
-        left: "65%",
-        top: "25%",
-    },
-    {
-        size: 350,
-        x: [0, 60, -120, 80, 0],
-        y: [0, -80, 100, -60, 0],
-        duration: 20,
-        left: "40%",
-        top: "55%",
-    },
-];
+import HeroCanvas from "@/components/ui/HeroCanvas";
 
 export default function Hero() {
     return (
@@ -58,40 +32,8 @@ export default function Hero() {
             id="home"
             className="relative flex min-h-screen items-center justify-center overflow-hidden px-6"
         >
-            {/* ── Glowing Orbs Background ── */}
-            <div className="pointer-events-none absolute inset-0">
-                {orbs.map((orb, i) => (
-                    <motion.div
-                        key={i}
-                        animate={{ x: orb.x, y: orb.y }}
-                        transition={{
-                            duration: orb.duration,
-                            repeat: Infinity,
-                            repeatType: "mirror",
-                            ease: "easeInOut",
-                        }}
-                        className="absolute rounded-full"
-                        style={{
-                            width: orb.size,
-                            height: orb.size,
-                            left: orb.left,
-                            top: orb.top,
-                            background: "rgba(0, 112, 243, 0.15)",
-                            filter: "blur(100px)",
-                        }}
-                    />
-                ))}
-            </div>
-
-            {/* Grid Pattern Overlay */}
-            <div
-                className="pointer-events-none absolute inset-0 opacity-[0.03]"
-                style={{
-                    backgroundImage:
-                        "linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)",
-                    backgroundSize: "60px 60px",
-                }}
-            />
+            {/* Neural Network Canvas Background */}
+            <HeroCanvas />
 
             {/* Content */}
             <motion.div
